@@ -42,7 +42,7 @@ const Feedback = ({ params }) => {
             Here is your interview feedback
           </h2>
           <h2 className="text-primary text-lg my-3">
-            Your overall interview rating is
+            Your overall interview rating is:
           </h2>
           <h2 className="text-sm text-gray-400">
             Find below questions with correct answers your answer and feedback
@@ -79,7 +79,11 @@ const Feedback = ({ params }) => {
             ))}
         </>
       )}
-      <Button onClick={() => router.replace("/dashboard")}>Go Home</Button>
+      <div className=" flex justify-end">
+        <Button className=" mt-2 " onClick={() => router.replace("/dashboard")}>
+          Go Home
+        </Button>
+      </div>
     </div>
   );
 };
