@@ -4,6 +4,7 @@ import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect } from "react";
+import Logo from "../../../public/Logo.svg";
 
 function Header() {
   const path = usePathname();
@@ -20,7 +21,7 @@ function Header() {
   return (
     <div className="flex  p-4 items-center justify-between bg-secondary shadow-sm">
       <div onClick={handleLogoClick} className=" cursor-pointer">
-        <Image src="/logo.svg" alt="Logo" width={50} height={50} />
+        <Image src={Logo} alt="Logo" width={50} height={50} />
       </div>
       <ul className="hidden md:flex gap-6 item">
         <li
