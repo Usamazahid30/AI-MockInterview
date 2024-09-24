@@ -15,6 +15,9 @@ function Header() {
   });
 
   const handleLogoClick = () => {
+    router.push("/");
+  };
+  const handleClick = () => {
     router.push("/dashboard");
   };
 
@@ -25,7 +28,7 @@ function Header() {
       </div>
       <ul className="hidden md:flex gap-6 item">
         <li
-          onClick={handleLogoClick}
+          onClick={handleClick}
           className={`hover:text-primary hover:font-bold transition-all cursor-pointer 
             ${path == "/dashboard" && "text-primary font-bold"}
             `}
