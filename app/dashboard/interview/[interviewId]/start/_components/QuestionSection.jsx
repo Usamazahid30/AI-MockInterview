@@ -21,7 +21,7 @@ const QuestionSection = ({ mockInterviewQuestion, activeQuestionIndex }) => {
             <h2
               key={index} // Add key for each element in the map function
               className={`p-2 bg-secondary rounded-full text-xs md:text-sm text-center cursor-pointer ${
-                activeQuestionIndex === index && "bg-cyan-900 text-white"
+                activeQuestionIndex === index && "bg-blue-900 text-white"
               }`}
             >
               Question #{index + 1}

@@ -2,21 +2,29 @@
 
 import { UserButton } from "@clerk/nextjs";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect } from "react";
 
 function Header() {
   const path = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     console.log(path);
   });
 
+  const handleLogoClick = () => {
+    router.push("/dashboard");
+  };
+
   return (
     <div className="flex  p-4 items-center justify-between bg-secondary shadow-sm">
-      <Image src="/logo.svg" alt="Logo" width={50} height={50} />
+      <div onClick={handleLogoClick} className=" cursor-pointer">
+        <Image src="/logo.svg" alt="Logo" width={50} height={50} />
+      </div>
       <ul className="hidden md:flex gap-6 item">
         <li
+          onClick={handleLogoClick}
           className={`hover:text-primary hover:font-bold transition-all cursor-pointer 
             ${path == "/dashboard" && "text-primary font-bold"}
             `}
